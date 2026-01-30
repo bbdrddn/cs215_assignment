@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Pixelify+Sans:wght@400..700&display=swap');
+
+
+/* CSS RULES FOR GENERAL STUFFS (LIKE HEADING TAGS, LABELS, FONTS, ETC.) */
+
+h1, h2, h3, h4, h5, p , label {
+    font-family: "Pixelify Sans" , sans-serif;
+    font-weight: 600;
+}
+
+button{
+    font-family: "Pixelify Sans" , sans-serif;
+    font-weight: 200;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+
+/* CSS RULES FOR PAGE LAYOUT (GRID)*/
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "header header header"
+    "left-flex main right-flex"
+    "footer footer footer";
+
+    background-color: beige;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin: 0px;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 5px 5px 5px 5px;
+}
+
+header{
+    display: grid;    
+    grid-area: header;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    height: 50px;
+    background-color: #0ABAB5;
+    color: white;
+    border: solid 2px black;
+    border-radius: 5px;
+    box-shadow: 2px 2px black;
+}
+
+main{
+    display: grid;
+    grid-area: main;
+    justify-content: center;
+}
+
+footer{
+    grid-area: footer;
+    padding-top: 50px;
+    margin-bottom: 20px;
+
+}
+
+#left-flex{ 
+    grid-area: left-flex
+}
+
+#right-flex{
+    grid-area: right-flex
+}
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* CSS RULES FOR GLOBAL HEADER */
+
+#logo{  
+    width: 100%;
+    height: 50px;
+    object-fit: contain;
+    background-color: #0ABAB5;
+}
+
+#logo-navigate{
+    justify-self: start;
+    width: 150px;
+    height: 50px;
+    background-color: #0ABAB5;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.user-navigate{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: end;
+    font-family: "Pixelify Sans" , sans-serif;
+    width: 150px;
+    height: 40px;
+    background-color: #0ABAB5;
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    box-sizing: border-box;  
+}
+
+
+.anchor-hover {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    width: 150px;
+    height: 50px;
+}
+
+.button-hover{
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.anchor-hover:hover,
+.button-hover:hover{
+  box-shadow: 4px 2px 0 1px black;
+  transform: translateX(-4px) translateY(-2px);
+  transition: all 0.3s;
+}
+
+.anchor-hover:active,
+.button-hover:active{
+  transform: translateX(0px) translateY(0px);
+  box-shadow: none;
+  color: white;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* CSS RULES FOR CREDENTIALS PAGES (LOGIN AND SIGNUP)*/
+
+.auth-form{
+    margin-top: 60px;
+    border: solid 2px black;
+    border-radius: 5px;
+    padding: 2em;
+    box-shadow: 2px 2px black;
+    width: 400px;
+    min-height: 400px; 
+    height: auto;
+
+}
+
+.form-input-grid {
+    display: grid;
+    grid-column: 2 / 4;
+    grid-template-columns:max-content 1fr;
+    gap: 2.3em 1em;
+    padding-bottom: 3em;
+
+}
+
+label{
+    margin-top: 8px;
+}
+
+input[type="text"],
+input[type="password"], 
+input[type="date"] {
+  padding: 6px 10px;      
+  border: 2px solid black;
+  border-radius: 4px;     
+  font-size: 1rem;
+  font-family: inherit;   
+  background-color: white;
+}
+
+.auth-form input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: solid 2px black;
+    border-radius: 5px;
+    font-family: "Pixelify Sans" , sans-serif;
+}
+
+#savecredentials{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+}
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* CSS RULES FOR USER DASHBOARD PAGE (EDIT USER INFO ETC.)*/
+
+
+/*RULES FOR HEADING PART*/
+.user-dashboard{
+    display: block;
+    text-align: left;
+    align-self: start;
+    width: 100%;
+}
+
+.title-heading{
+    border-bottom: 2px solid black;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+
+.user-dashboard-title{
+    padding-top: 50px;
+    padding-left: 30px;
+} 
+
+
+/*RULES FOR EDITING USER PROFILE PICTURE PART*/
+
+.smaller-title-heading{
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 20px;
+}
+
+.profile-photo-grid{
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+#profile-photo-frame{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    object-fit: cover;
+}
+
+.profile-photo-options{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding-left: 50px;
+}
+
+.profile-photo-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    width: auto;
+    height: 30px;
+    border-radius: 5px;
+    font-family: "Pixelify Sans" , sans-serif;
+}
+
+.profile-photo-options p{
+    text-align: left;
+    max-width: 800px;
+}
+
+.cautious-button{
+    background-color: red;
+    color: white;
+}
+
+#upload-button{
+    color:blue;
+}
+
+/*RULES FOR EDITING USER INFORMATION PART*/
+
+.info-input-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+    gap: 30px;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+.info-input-grid input{
+    font-size: 20px;
+    width: 600px;
+    height: auto;
+}
+
+.input-fields{
+    display: grid;
+    grid-template-columns: 200px 200px;
+    align-items: center;
+}
+
+
+/*RULES FOR ACCESING GAME HISTORY AND ACCOUNT DELETION PART INFORMATION PART*/
+
+.user-dashboard-button{
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.save-button-grid{
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    padding-top: 30px;
+    padding-right: 20px;
+    margin-bottom: 50px;
+}
+
+.green-button{
+    background-color: green;
+    color: white;
+}
+
+#reset-button{
+    background-color: beige;
+    color: blue;
+    width: 100px;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*RULES FOR USER GAME HISTORY PAGE*/
+
+/*RULES FOR GAME HISTORY TABLE*/
+
+.game-history-grid{
+    text-align: center;
+}
+
+.game-history-table{
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Pixelify Sans" , sans-serif;
+    font-size: 25px;
+    border-bottom: 2px solid black;
+}
+
+.game-history-table th{
+    padding-bottom: 20px;
+    border-bottom: 2px solid black;
+}
+
+.game-history-table td{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 23px;
+}
+
+.match-win{
+    color: green;
+    text-transform: uppercase;
+}
+
+.match-loss{
+    color: red;
+    text-transform: uppercase;
+}
+
+/*RULES FOR PAGINATION*/
+
+.pagination{
+    display: flex;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    justify-content: center;
+    gap: 50px;
+}
+
+.pagination a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+.pagination a.active{
+    border: 2px solid black;
+    width: 30px;
+    height: auto;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*RULES FOR GAME DASHBOARD PAGE*/
+
+/*RULES FOR FEATURED GAMES (ONES WITH THUMBNAIL)*/
+.featured-games-grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto; 
+    gap: 50px;
+}
+
+.game-card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 280px; 
+}
+
+.game-thumbnail{
+    display: block;
+    width: 280px;
+    height: 380px;
+    margin-bottom: 5px;
+}
+
+.game-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+/*RULES FOR OTHER GAMES (NO THUMBNAIL GAMES)*/
+
+.other-games-grid{
+    display: block;
+    width: 100%;
+}
+
+.game-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.title-card{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.row-icon {
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 100px; 
+}
+
+
+.play-button{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 200px;
+    border: 2px solid black;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: "Pixelify Sans", sans-serif;
+}

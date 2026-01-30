@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <title>Game Center: Login</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+</head>
+<body>
+    <header>
+        <a href="signup.html" class="anchor-hover" id="logo-navigate" > <img id="logo" src="images/Logo2.png" alt="LogoAndName"/></a>
+        <a href="signup.html" class="anchor-hover user-navigate">Sign Up</a>
+    </header>
+
+    <aside id="right-flex"></aside>
+    <aside id="left-flex"></aside>
+
+    <main>
+        <form class="auth-form" action="game_dashboard.html">
+            <h1>Log In</h1>
+            <div class="form-input-grid">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username"/>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name= "password"/>
+            </div>
+
+            <div id="savecredentials">
+                <input type="checkbox" name="rememberme" id="rememberme"/>
+                <label for="rememberme">Remember Me</label>   
+            </div>
+
+            <div class="submit">
+                <input class="button-hover" type="submit" value="Login"/>
+            </div>
+        </form>
+
+        <div class="form-note">
+            <p>Don't have an account ? <a href="signup.html"> Sign Up !</a></p>
+            <p>Forgot your password ? <a href="signup.html"> Click Here !</a></p>
+        </div>
+    </main>
+    <footer>CS215 - Group 29: Bansal, Le , Vi </footer>
+</body>
+</html>

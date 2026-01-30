@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <title>Game Center: Landing Page</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+</head>
+<body>
+    <header>
+        <a href="signup.html" class="anchor-hover" id="logo-navigate" > <img id="logo" src="images/Logo2.png" alt="LogoAndName"/> </a>
+        <a href="login.html" class="anchor-hover user-navigate">Login</a>
+    </header>
+
+    <aside id="right-flex"></aside>
+    <aside id="left-flex"></aside>
+
+    <main>
+        <form class="auth-form" action="login.html">
+            <h1>Sign Up</h1>
+            <div class="form-input-grid">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" />
+
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" />
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name= "password"/>
+
+                <label for="cpassword"> Confirm Password</label>
+                <input type="password" id="cpassword" name= "cpassword"/>
+
+                <label for="profilephoto">Profile Picture</label>
+                <input type="file" id="profilephoto" name="profilephoto"/> 
+            </div>
+
+
+            <div class="submit">
+                <input class="button-hover" type="submit" value="Sign Up"/>
+            </div>
+        </form>
+
+        <div class="form-note">
+            <p>Already have an account ? <a href="login.html"> Log in !</a></p>
+            <p>Forgot your password ? <a href="signup.html"> Click Here !</a></p>
+        </div>
+    </main>
+    <footer>CS215 - Group 29: Bansal, Le , Vi </footer>
+</body>
+</html>

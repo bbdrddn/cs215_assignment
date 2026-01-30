@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <title>Game Center: User Dashboard</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+</head>
+<body>
+    <header>
+        <a href="game_dashboard.html" class="anchor-hover" id="logo-navigate" > <img id="logo" src="images/Logo2.png" alt="LogoAndName"/> </a>
+        <a href="user_dashboard.html" class="anchor-hover user-navigate">Profile</a>
+        <a href="user_history.html" class="anchor-hover user-navigate">History</a>
+        <a href="login.html" class="anchor-hover user-navigate">Logout</a>
+    </header>
+
+    <aside id="right-flex"></aside>
+    <aside id="left-flex"></aside>
+
+    <main class="user-dashboard">
+
+        <div class="title-heading">
+            <h1 class="user-dashboard-title">USER DASHBOARD</h1>
+        </div>
+
+        <div class="smaller-title-heading">
+            <h2>Profile Picture</h2>
+            <div class="profile-photo-grid">
+                <img src="images/egg.jpg" id="profile-photo-frame" alt="placeholder avatar" />
+
+                <div class="profile-photo-options">
+                    <p>Please upload a clear and well-sized profile picture (preferably 200x200 pixels) which follows the appropriate guidelines for profile pictures. </p>
+                    <div class="profile-photo-buttons">
+                        <button class="button-hover" id="upload-button">Upload Profile Picture</button>
+                        <button class="button-hover cautious-button">Remove Profile Picture</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <h2>User Information</h2>
+            <div class="info-input-grid">
+
+                <div class="input-fields">
+                    <label for="username"> Username </label>
+                    <input type="text" id="username" value="Jawn Van Der Dough"/>
+                </div>
+
+                <div class="input-fields">
+                    <label for="dob"> Date of Birth </label>
+                    <input type="date" id="dob" value="2018-03-06"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="smaller-title-heading">
+            <h2>Game History</h2>
+            <div>
+                <p>Game history can be accessed by clicking the button below.</p>
+                <button class="user-dashboard-button button-hover"> Access History Page </button>
+            </div>
+
+            <h2>Account Deletion</h2>
+            <div>
+                <p>Clicking the button below will permanently remove your account.</p>
+                <button class="user-dashboard-button button-hover cautious-button"> Delete This Account </button>
+            </div>
+        </div>
+
+        <div class="smaller-title-heading">
+            <div class="save-button-grid">
+                <button type="reset" class="user-dashboard-button button-hover" id="reset-button"> Reset</button>
+                <button type="submit" class="user-dashboard-button button-hover green-button"> Save Changes </button>
+            </div>
+        </div>
+
+    </main>
+    <footer>CS215 - Group 29: Bansal, Le , Vi </footer>
+</body>
+</html>
