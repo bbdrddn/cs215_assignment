@@ -576,3 +576,9 @@ input[type="date"] {
     visibility: visible;
     color: red;
 }
+
+.error_hidden,
+.error_visible {
+    font-family: "Outfit", sans-serif;
+    font-size: 0.9rem;
+}
