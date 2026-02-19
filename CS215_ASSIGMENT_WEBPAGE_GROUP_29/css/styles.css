@@ -3,18 +3,6 @@
 
 
 /* CSS RULES FOR GENERAL STUFFS (LIKE HEADING TAGS, LABELS, FONTS, ETC.) */
-
-.error_hidden{
-    visibility: hidden;
-}
-
-.error_visible{
-    visibility: visible;
-    color: red;
-    background-color: #0ABAB5;
-}
-
-
 input[type="file"]::file-selector-button {
     background-color: #eee;
     border: 2px solid black;
@@ -573,3 +561,18 @@ input[type="date"] {
 }
 
 /* biywecbwbcnwobcivwiobcfnowbicbuwbvcwbvscuvwbdcvbeicivbwicbo3nowcdn */
+
+/* ====================== ERROR CLASSES ============= */
+.error_border{
+    outline: 2px solid red;
+    border-color: red;
+}
+.error_hidden{
+    visibility: hidden;
+    color: red;
+}
+
+.error_visible{
+    visibility: visible;
+    color: red;
+}
