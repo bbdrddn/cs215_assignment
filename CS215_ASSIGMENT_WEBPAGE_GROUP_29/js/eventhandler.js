@@ -75,17 +75,17 @@ function handleChangeFile(e){
 // CHECK INPUTS ==>>
 
 function checkUserName(name) {
-    const regex = /^[a-zA-Z0-9_-]{3,16}$/;
+    const regex = /^[a-zA-Z0-9_]{3,16}$/;
     return regex.test(name);
 }
 
 function checkPassword(pass) {
-    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    const regex = /^(?=.*[^a-zA-Z])\S{6,}$/; //at least 6 characters with no spaces
     return regex.test(pass);
 }
 
 function checkEmail(email) {
-    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; //any email will suffice
     return regex.test(email);
 }
 
