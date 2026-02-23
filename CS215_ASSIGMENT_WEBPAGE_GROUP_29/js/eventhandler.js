@@ -11,7 +11,7 @@ function login_submit(e) {
     let passValid = pwd.value   ? checkPassword(pwd.value)   : false;
 
     if (!uname.value) error_input_red(uname, "Username is required");
-    else if (!nameValid) error_input_red(uname, "Username must be 3–16 characters");
+    else if (!nameValid) error_input_red(uname, "Username must contain only 3-50 letters, digits, underscores");
 
     if (!pwd.value) error_input_red(pwd, "Password is required");
     else if (!passValid) error_input_red(pwd, "Password must be at least 6 characters and contain no spaces");
@@ -40,10 +40,10 @@ function signUp_submit(e) {
     let cpassValid = cpass.value ? confirmPassword(pwd.value, cpass.value) : false;
 
     if (!uname.value) error_input_red(uname, "Username is required");
-    else if (!nameValid) error_input_red(uname, "Username must be 3–16 characters");
+    else if (!nameValid) error_input_red(uname, "Username must contain only letters, digits, underscores");
 
     if (!pwd.value) error_input_red(pwd, "Password is required");
-    else if (!passValid) error_input_red(pwd, "Password must be 6+ characters and include at least one non-letter character");
+    else if (!passValid) error_input_red(pwd, "Password must be at least 6 characters and at least 1 non letter character ");
 
     if (!mail.value) error_input_red(mail, "Email is required");
     else if (!mailValid) error_input_red(mail, "Invalid email format");
@@ -94,7 +94,7 @@ function defaultProfile(){
 // CHECK INPUTS ==>>
 
 function checkUserName(name) {
-    const regex = /^[a-zA-Z0-9_]{3,16}$/;
+    const regex = /^[a-zA-Z0-9_]{3,50}$/;
     return regex.test(name);
 }
 
@@ -136,7 +136,7 @@ function user_blur(e) {
     const self = e.target;
     if (!self.value) { error_input_red(self, "This field must not be empty"); return; }
     if (!checkUserName(self.value)) {
-        error_input_red(self, "Username must be 3–16 characters");
+        error_input_red(self, "Username must contain only 3-50 letters, digits, underscores");
     } else {
         reset_input(self);
     }
