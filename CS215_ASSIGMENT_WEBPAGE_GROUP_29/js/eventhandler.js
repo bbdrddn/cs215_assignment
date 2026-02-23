@@ -55,7 +55,21 @@ function signUp_submit(e) {
         e.preventDefault();
     }
 }
+//======= dashboard handler====>
+function trigger_upload(){
+    document.getElementById("file-upload-input").click();
+}
 
+function handleChangeFile(e){
+    const val = e.target;
+    const profile = document.getElementById("profile-photo-frame");
+    if(val.files && val.files.length > 0){
+        let urlImage = URL.createObjectURL(val.files[0]);
+        profile.setAttribute("src", urlImage);
+    } else {
+        alert("image error");
+    }
+}
 // Common FUNCTIONS DOWN HERE =================================================================
 
 // CHECK INPUTS ==>>

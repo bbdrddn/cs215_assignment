@@ -35,7 +35,7 @@
                         <button class="button-hover" id="upload-button">Upload Profile Picture</button>
                         <button class="button-hover cautious-button">Remove Profile Picture</button>
                     </div>
-                     <div class="error_visible">
+                     <div class="error_hidden">
                         Username is Invalid!!
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                 <div class="input-fields">
                     <label for="username"> Username </label>
                     <input type="text" id="username" value="Jawn Van Der Dough"/>
-                    <div class="error_visible">
+                    <div class="error_hidden">
                         Username is Invalid!!
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                 <div class="input-fields">
                     <label for="dob"> Date of Birth </label>
                     <input type="date" id="dob" value="2018-03-06"/>
-                    <div class="error_visible">
+                    <div class="error_hidden">
                         Username is Invalid!!
                     </div>
                 </div>
@@ -82,8 +82,10 @@
                 <button type="submit" class="user-dashboard-button button-hover green-button"> Save Changes </button>
             </div>
         </div>
-
+        <input type="file" class="error_hidden" id="file-upload-input"  accept="image/*">
     </main>
     <footer>CS215 - Group 29: Bansal, Le , Vi </footer>
+    <script src="/js/eventhandler.js"></script>
+    <script src="/js/register_userdashboard.js"></script>
 </body>
 </html>
